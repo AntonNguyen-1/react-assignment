@@ -4,6 +4,9 @@ import { PhysicalCardItem } from "../PhysicalCardItem";
 import { VirtualCardItem } from "../VirtualCardItem";
 import { ICard } from "../../types";
 import { CardSection } from "../CardSection";
+import { OldCardsIcon } from "../../assets/icons/OldCardsIcon";
+import { PhysicalCardsIcon } from "../../assets/icons/PhysicalCardsIcon";
+import { VirtualCardsIcon } from "../../assets/icons/VirtualCardsIcon";
 
 export const CardsList = () => {
   const currentDate = new Date();
@@ -35,6 +38,7 @@ export const CardsList = () => {
 
   return (
     <div className="cards-list-container">
+      <VirtualCardsIcon />
       <CardSection
         title="Virtual Cards"
         cards={virtualCards}
@@ -46,6 +50,7 @@ export const CardsList = () => {
           </p>
         }
       />
+      <PhysicalCardsIcon />
       <CardSection
         title="Physical Cards"
         cards={physicalCards}
@@ -64,6 +69,7 @@ export const CardsList = () => {
           </>
         }
       />
+      <OldCardsIcon />
       <CardSection
         title="Old Cards"
         cards={oldCards}
