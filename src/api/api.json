@@ -1,0 +1,38 @@
+{
+  "data": {
+    "cards": [
+      {
+        "id": "5afafe4f-fd49-4211-8a8e-a79143545ec9",
+        "holderName": "Card Holder Name",
+        "maskedCardNumber": "•••• 8156",
+        "isActive": true,
+        "expiresAt": "2025-12-12",
+        "type": "virtual"
+      },
+      {
+        "id": "89e7e9e2-dad1-4f94-bbfa-f3c99e8997b7",
+        "holderName": "Card Holder Name",
+        "maskedCardNumber": "•••• 4675",
+        "isActive": false,
+        "expiresAt": "2022-10-28",
+        "type": "virtual"
+      },
+      {
+        "id": "81983439-20ed-4fdf-9632-5fefcd814a8e",
+        "holderName": "Card Holder Name",
+        "maskedCardNumber": "•••• 8156",
+        "isActive": false,
+        "expiresAt": "2024-10-28",
+        "type": "physical"
+      },
+      {
+        "id": "2a24abab-7b27-4192-8b7a-b57ab4558b51",
+        "holderName": "Card Holder Name",
+        "maskedCardNumber": "•••• 1123",
+        "isActive": false,
+        "expiresAt": "2021-10-28",
+        "type": "physical"
+      }
+    ]
+  }
+}
