@@ -3,6 +3,7 @@ import { OldCardItem } from "../OldCardItem";
 import { PhysicalCardItem } from "../PhysicalCardItem";
 import { VirtualCardItem } from "../VirtualCardItem";
 import { ICard } from "../../types";
+import { CardSection } from "../CardSection";
 
 export const CardsList = () => {
   const currentDate = new Date();
@@ -34,15 +35,57 @@ export const CardsList = () => {
 
   return (
     <div className="cards-list-container">
-      {virtualCards.map((card) => (
-        <VirtualCardItem key={card.id} card={card} />
-      ))}
-      {physicalCards.map((card) => (
-        <PhysicalCardItem key={card.id} card={card} />
-      ))}
-      {oldCards.map((card) => (
-        <OldCardItem key={card.id} card={card} />
-      ))}
+      <CardSection
+        title="Virtual Cards"
+        cards={virtualCards}
+        CardItemComponent={VirtualCardItem}
+        description={
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        }
+      />
+      <CardSection
+        title="Physical Cards"
+        cards={physicalCards}
+        CardItemComponent={PhysicalCardItem}
+        description={
+          <>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore mag
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </>
+        }
+      />
+      <CardSection
+        title="Old Cards"
+        cards={oldCards}
+        CardItemComponent={OldCardItem}
+        description={
+          <>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad min
+            </p>
+          </>
+        }
+      />
+      <div className="buttons-container">
+        <button className="continue-btn">Continue</button>
+        <button className="back-btn">Back</button>
+      </div>
     </div>
   );
 };
