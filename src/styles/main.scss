@@ -1,12 +1,142 @@
 $primary-color: #ffffff;
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica;
   background-color: $primary-color;
   color: #000;
+  text-align: left;
+  width: 390px;
 }
 
 .container {
-  padding: 20px;
-  text-align: center;
+  padding: 24px;
+  h2 {
+    color: #b0b2b5;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .card-type-title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .cards-section-container {
+    .buttons-container {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      button {
+        width: 343px;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+      }
+      .continue-btn {
+        background-color: #000;
+        color: #fff;
+        border-radius: 4px;
+      }
+      .back-btn {
+        background: none;
+        color: #000;
+      }
+    }
+  }
+  .card-section {
+    margin-top: 44px;
+
+    &:first-child {
+      margin-top: 32px;
+    }
+    .description-wrapper {
+      display: flex;
+      flex-direction: column;
+      .description-item {
+        display: flex;
+        margin-bottom: 26px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      p {
+        margin-left: 12px;
+      }
+    }
+  }
+  .card-type-title-wrapper {
+    display: flex;
+    align-items: center;
+    .card-type-title {
+      margin-left: 8px;
+    }
+  }
+  .cards-list-container {
+    position: relative;
+    display: flex;
+    background: #f4f5f6;
+    width: 350px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    .icon-wrapper {
+      height: 100%;
+      align-self: center;
+      padding-left: 16px;
+    }
+    .card-info {
+      padding: 30px;
+      .holder-name {
+        font-weight: 700;
+      }
+      .masked-number {
+        font-size: 14px;
+        color: #747d8b;
+      }
+    }
+    &.old {
+      background: none;
+      margin-bottom: 20px;
+      margin-top: 24px;
+      .icon-wrapper {
+        padding: 0;
+      }
+      .card-info {
+        padding: 0;
+        padding-left: 8px;
+      }
+      .masked-number {
+        font-weight: 700;
+        color: #000;
+      }
+      .card-type-text {
+        font-size: 12px;
+        color: #747d8b;
+      }
+    }
+    .status {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #fff;
+      &.active {
+        background: #0cd96f;
+      }
+      &.inactive {
+        background: #abb1ba;
+      }
+    }
+  }
 }

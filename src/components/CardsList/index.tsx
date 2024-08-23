@@ -7,6 +7,7 @@ import { CardSection } from "../CardSection";
 import { OldCardsIcon } from "../../assets/icons/OldCardsIcon";
 import { PhysicalCardsIcon } from "../../assets/icons/PhysicalCardsIcon";
 import { VirtualCardsIcon } from "../../assets/icons/VirtualCardsIcon";
+import { СheckedIcon } from "../../assets/icons/СheckedIcon";
 
 export const CardsList = () => {
   const currentDate = new Date();
@@ -37,57 +38,78 @@ export const CardsList = () => {
   );
 
   return (
-    <div className="cards-list-container">
-      <VirtualCardsIcon />
+    <div className="cards-section-container">
       <CardSection
         title="Virtual Cards"
         cards={virtualCards}
         CardItemComponent={VirtualCardItem}
+        icon={<VirtualCardsIcon />}
         description={
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-          </p>
+          <div className="description-wrapper">
+            <div className="description-item">
+              <СheckedIcon />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+          </div>
         }
       />
-      <PhysicalCardsIcon />
       <CardSection
         title="Physical Cards"
+        icon={<PhysicalCardsIcon />}
         cards={physicalCards}
         CardItemComponent={PhysicalCardItem}
         description={
-          <>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore mag
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </>
+          <div className="description-wrapper">
+            <div className="description-item">
+              <СheckedIcon />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore mag
+              </p>
+            </div>
+            <div className="description-item">
+              <СheckedIcon />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+            <div className="description-item">
+              <СheckedIcon />
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
         }
       />
-      <OldCardsIcon />
       <CardSection
         title="Old Cards"
+        icon={<OldCardsIcon />}
         cards={oldCards}
         CardItemComponent={OldCardItem}
         description={
-          <>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad min
-            </p>
-          </>
+          <div className="description-wrapper">
+            <div className="description-item">
+              <СheckedIcon />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+            <div className="description-item">
+              <СheckedIcon />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad min
+              </p>
+            </div>
+          </div>
         }
       />
+
       <div className="buttons-container">
         <button className="continue-btn">Continue</button>
         <button className="back-btn">Back</button>
